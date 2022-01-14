@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import Conversor from './Components/Conversor';
+
+const COIN = {
+  from: 'BRL',
+  to: 'USD'
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Conversor coinFrom={COIN.from} coinTo={COIN.to}/>
     </div>
   );
 }
