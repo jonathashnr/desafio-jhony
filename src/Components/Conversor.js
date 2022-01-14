@@ -3,7 +3,7 @@ import ConversorForm from './ConversorForm';
 import ConversorSection from './ConversorSection';
 import simulation from '../Functions/Services'
 
-const INITIAL_STATE = {
+const DEFAULT_RATES = {
   bank: {
     tax: 0,
     amount: 0,
@@ -16,8 +16,9 @@ const INITIAL_STATE = {
 
 const Conversor = props => {
   const [formInput, setFormInput] = useState({ value:'', formatted:''});
-  const [convertedRates, setConvertedRates] = useState(INITIAL_STATE);
+  const [convertedRates, setConvertedRates] = useState(DEFAULT_RATES);
   const caughtSomeError = useRef(false);
+
   useEffect(() => {
     simulation(formInput.value, props.coinFrom, props.coinTo)
       .then(res => afterSimulationResolve(res))
@@ -30,7 +31,7 @@ const Conversor = props => {
   }
   const afterSimulationError = () => {
     caughtSomeError.current = true;
-    setConvertedRates(INITIAL_STATE)
+    setConvertedRates(DEFAULT_RATES)
   }
   return (
     <div id='conversorContainer'>

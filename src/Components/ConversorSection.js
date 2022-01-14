@@ -3,13 +3,13 @@ import NumberFormat from 'react-number-format';
 
 
 const ConversorSection = function ({ title, value, tax, coin, showConversion }) {
-  let wPercentage, taxWidthStyle, opacityStyle;
+  let taxPercentage, taxWidthStyle, opacityStyle;
   if (showConversion) {
-    wPercentage = `${Math.round(tax*100)}%`;
-    taxWidthStyle = { width: `calc(var(--minTaxBarWidth) + ${wPercentage})`, minWidth: 'var(--minTaxBarWidth)' }
+    taxPercentage = `${Math.round(tax*100)}%`;
+    taxWidthStyle = { width: `calc(var(--minTaxBarWidth) + ${taxPercentage})`, minWidth: 'var(--minTaxBarWidth)' }
     opacityStyle = { opacity: '1' }
   } else {
-    wPercentage = '';
+    taxPercentage = '';
     taxWidthStyle = { minWidth: 'var(--minTaxBarWidth)' };
     opacityStyle = { opacity: '0.4' };
     value = '';
@@ -30,7 +30,7 @@ const ConversorSection = function ({ title, value, tax, coin, showConversion }) 
               decimalScale={2}
             />
           </span>
-          <div className='taxBar size3' style={taxWidthStyle}>{wPercentage}</div>
+          <div className='taxBar size3' style={taxWidthStyle}>{taxPercentage}</div>
         </div>
       </div>
     </div>

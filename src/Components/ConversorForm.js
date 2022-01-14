@@ -13,7 +13,6 @@ const ConversorForm = props => {
       return { color: 'var(--corBarra)' }
     }
   }
-  const valueLimiter = ({ floatValue }) => floatValue <= 9999999999999;
   return (
     <div className='conversorSection'>
       <span className='subTitulo size2'>Você envia</span>
