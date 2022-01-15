@@ -1,14 +1,14 @@
-
 :root {
  --textColor: #113366;
  --barColor: #006FF2;
  --taxBarColor: #FF5D5D;
  --minTaxBarWidth: 1rem;
-  font-size: 300%;
+  font-size: 200%;
 }
 
 .app {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -44,7 +44,7 @@
 #formCoin {
   position: absolute;
   left: 0.5rem;
-  top: 	0.285rem;
+  top: 	0.26rem;
 }
 #formWrapper {
   position: relative;
@@ -81,6 +81,15 @@
   border-radius: 0.625rem;
   color: white;
   padding-right: 0.5rem;
+}
+
+.githubIcon {
+  color: var(--barColor);
+  margin-top: 1em;
+  font-size: 1.5rem;
+}
+.githubIcon:hover {
+  color: var(--taxBarColor);
 }
 
 /* generics */
