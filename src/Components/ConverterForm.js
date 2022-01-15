@@ -15,7 +15,7 @@ const ConverterForm = ({ value, setValueFunction, coin, error }) => {
 
   return (
     <div className='converterSection'>
-      <span className='subTitulo size2'>Você envia</span>
+      <span className='subTitle size2'>Você envia</span>
       <div id='formWrapper'>
         <NumberFormat
           className='converterForm size1'

@@ -3,7 +3,8 @@
  --textColor: #113366;
  --barColor: #006FF2;
  --taxBarColor: #FF5D5D;
- --minTaxBarWidth: 15px;
+ --minTaxBarWidth: 1rem;
+  font-size: 300%;
 }
 
 .app {
@@ -16,22 +17,22 @@
 }
 
 #conveterContainer {
-  border-radius: 4px;
-  min-width: 200px;
+  border-radius: 0.25rem;
+  min-width: 13rem;
   width: 40vw;
   background-color: white;
   color: var(--textColor);
 }
 .converterSection {
-  padding: 10px 12px;
+  padding: 0.625rem 0.75rem;
 }
 .topBorder {
-  border-top: 1px solid #F0EDED;
+  border-top: 0.0625rem solid #F0EDED;
 }
 .converterForm {
-  border: 1px solid #D8D8D8;
-  border-radius: 4px;
-  padding-left: 34px;
+  border: 0.0625rem solid #D8D8D8;
+  border-radius: 0.25rem;
+  padding-left: 2rem;
   width: 100%;
   font-family: 'Open Sans', Arial, sans-serif;
   color: var(--textColor);
@@ -42,8 +43,8 @@
 
 #formCoin {
   position: absolute;
-  left: 8px;
-  top: 5px;
+  left: 0.5rem;
+  top: 	0.285rem;
 }
 #formWrapper {
   position: relative;
@@ -51,12 +52,12 @@
 
 .subTitle {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
 }
 .barTitle {
   display: flex;
   justify-content: space-between;
-  margin: 0 8px;
+  margin: 0 0.5rem;
 }
 
 .valueBar {
@@ -64,10 +65,10 @@
   align-items: center;
   position: relative;
   background-color: var(--barColor);
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: white;
-  padding-left: 8px;
-  height: 15px;
+  padding-left: 0.5rem;
+  height: 1rem;
 }
 .taxBar {
   display: flex;
@@ -77,23 +78,23 @@
   right: 0;
   background-color: var(--taxBarColor);
   height: 100%;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   color: white;
-  padding-right: 8px;
+  padding-right: 0.5rem;
 }
 
 /* generics */
 .size1 {
-  font-size: 11px;
+  font-size: 0.75rem;
 }
 .size2 {
-  font-size: 9px;
+  font-size: 0.625rem;
 }
 .size3 {
-  font-size: 8px;
+  font-size: 0.5rem;
 }
 .size4 {
-  font-size: 6px;
+  font-size: 0.4375rem;
 }
 .bold {
   font-weight: bold;
