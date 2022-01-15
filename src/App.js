@@ -11,7 +11,7 @@ function App() {
   return (
     <div className='app'>
       <Converter coinFrom={COIN.from} coinTo={COIN.to} />
-      <a href='https://github.com/jonathashnr/' target='_blank'>
+      <a href='https://github.com/jonathashnr/desafio-jhony' target='_blank'>
         <FaGithub className='githubIcon' />
       </a>
     </div>
