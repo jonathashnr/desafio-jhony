@@ -1,7 +1,7 @@
 import React from 'react'
 import NumberFormat from 'react-number-format'
 
-const ConverterForm = ({ value, setValueFunction, coin, error }) => {
+const ConverterForm = ({ title, value, setValueFunction, coin, error }) => {
   
   const formHandler = (values) => {
     const { value, formatted } = values;
@@ -15,7 +15,7 @@ const ConverterForm = ({ value, setValueFunction, coin, error }) => {
 
   return (
     <div className='converterSection'>
-      <span className='subTitle size2'>Você envia</span>
+      <span className='subTitle size2'>{title}</span>
       <div id='formWrapper'>
         <NumberFormat
           className='converterForm size1'
@@ -25,6 +25,7 @@ const ConverterForm = ({ value, setValueFunction, coin, error }) => {
           allowNegative={false}
           value={value.formatted}
           onValueChange={formHandler}
+          maxlength="20"
         />
         <span id='formCoin' className='size1 bold' style={createCoinColorStyle(error)}>{coin}</span>
       </div>

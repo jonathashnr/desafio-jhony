@@ -34,6 +34,7 @@ const Converter = ({ coinFrom = 'BRL', coinTo = 'USD' }) => {
   return (
     <div id='conveterContainer'>
       <ConverterForm
+        title='Você envia'
         value={formInput}
         setValueFunction={setFormInput}
         coin={coinFrom}
