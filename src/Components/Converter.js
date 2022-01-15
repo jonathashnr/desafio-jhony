@@ -21,17 +21,13 @@ const Converter = ({ coinFrom = 'BRL', coinTo = 'USD'}) => {
 
   useEffect(() => {
     simulation(formInput.value, coinFrom, coinTo)
-      .then(res => afterSimulationResolve(res))
-      .catch(err => afterSimulationError())
+      .then(res => wasSimulationResolved(true, res))
+      .catch(err => wasSimulationResolved(false))
   }, [formInput.value])
 
-  const afterSimulationResolve = (res) => {
-    caughtSomeError.current = false;
+  const wasSimulationResolved = (isResolved, res = INITIAL_RATES) => {
+    caughtSomeError.current = !isResolved;
     setConvertedRates(res)
-  }
-  const afterSimulationError = () => {
-    caughtSomeError.current = true;
-    setConvertedRates(INITIAL_RATES)
   }
   return (
     <div id='conversorContainer'>
