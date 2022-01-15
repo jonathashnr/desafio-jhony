@@ -1,7 +1,7 @@
 import React from 'react';
 import NumberFormat from 'react-number-format';
 
-const ConversorForm = props => {
+const ConverterForm = props => {
   const formHandler = (values) => {
     const { formatted, value } = values;
     props.setInput({ value , formatted });
@@ -14,7 +14,7 @@ const ConversorForm = props => {
     }
   }
   return (
-    <div className='conversorSection'>
+    <div className='converterSection'>
       <span className='subTitulo size2'>Você envia</span>
       <div id='formWrapper'>
         <NumberFormat
@@ -32,4 +32,4 @@ const ConversorForm = props => {
   )
 }
 
-export default ConversorForm
+export default ConverterForm

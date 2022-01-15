@@ -1,5 +1,5 @@
 import './App.css';
-import Conversor from './Components/Conversor';
+import Converter from './Components/Converter';
 
 const COIN = {
   from: 'BRL',
@@ -9,7 +9,7 @@ const COIN = {
 function App() {
   return (
     <div className='app'>
-      <Conversor coinFrom={COIN.from} coinTo={COIN.to}/>
+      <Converter coinFrom={COIN.from} coinTo={COIN.to}/>
     </div>
   );
 }

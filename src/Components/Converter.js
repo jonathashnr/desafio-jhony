@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import ConversorForm from './ConversorForm';
-import ConversorSection from './ConversorSection';
+import ConverterForm from './ConverterForm';
+import ConverterSection from './ConverterSection';
 import simulation from '../Functions/Services'
 
 const DEFAULT_RATES = {
@@ -14,7 +14,7 @@ const DEFAULT_RATES = {
   }
 }
 
-const Conversor = props => {
+const Converter = props => {
   const [formInput, setFormInput] = useState({ value:'', formatted:''});
   const [convertedRates, setConvertedRates] = useState(DEFAULT_RATES);
   const caughtSomeError = useRef(false);
@@ -35,20 +35,20 @@ const Conversor = props => {
   }
   return (
     <div id='conversorContainer'>
-      <ConversorForm
+      <ConverterForm
         input={formInput}
         setInput={setFormInput}
         coin={props.coinFrom}
         error={caughtSomeError.current}
       />
-      <ConversorSection
+      <ConverterSection
         title='Bancos Tradicionais'
         coin={props.coinTo}
         value={convertedRates.bank.amount}
         tax={convertedRates.bank.tax}
         showConversion={!!formInput.value && !caughtSomeError.current}
       />
-      <ConversorSection
+      <ConverterSection
         title='Remessa Online'
         coin={props.coinTo}
         value={convertedRates.remessa.amount}
@@ -60,4 +60,4 @@ const Conversor = props => {
 }
 
 
-export default Conversor;
+export default Converter;

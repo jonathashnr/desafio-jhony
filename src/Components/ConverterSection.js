@@ -2,7 +2,7 @@ import React from 'react'
 import NumberFormat from 'react-number-format';
 
 
-const ConversorSection = function ({ title, value, tax, coin, showConversion }) {
+const ConverterSection = function ({ title, value, tax, coin, showConversion }) {
   let taxPercentage, taxWidthStyle, opacityStyle;
   if (showConversion) {
     taxPercentage = `${Math.round(tax*100)}%`;
@@ -15,7 +15,7 @@ const ConversorSection = function ({ title, value, tax, coin, showConversion }) 
     value = '';
   }
   return (
-    <div className='conversorSection topBorder'>
+    <div className='converterSection topBorder'>
       <span className='subTitulo size2'>{title}</span>
       <div id='opacityWrapper' style={opacityStyle}>
         <div className='barTitulo size4'><span>Você recebe</span><span>Taxas</span></div>
@@ -37,4 +37,4 @@ const ConversorSection = function ({ title, value, tax, coin, showConversion }) 
   )
 }
 
-export default ConversorSection
+export default ConverterSection
