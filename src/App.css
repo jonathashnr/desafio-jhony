@@ -1,8 +1,8 @@
 
 :root {
- --corTexto: #113366;
- --corBarra: #006FF2;
- --corOff: #FF5D5D;
+ --textColor: #113366;
+ --barColor: #006FF2;
+ --taxBarColor: #FF5D5D;
  --minTaxBarWidth: 15px;
 }
 
@@ -15,51 +15,45 @@
   background-color: lightgray;
 }
 
-#conversorContainer {
-
+#conveterContainer {
   border-radius: 4px;
   min-width: 200px;
   width: 40vw;
   background-color: white;
-  color: var(--corTexto);
+  color: var(--textColor);
 }
-
 .converterSection {
   padding: 10px 12px;
 }
-
-.conversorForm {
-
+.topBorder {
+  border-top: 1px solid #F0EDED;
+}
+.converterForm {
   border: 1px solid #D8D8D8;
   border-radius: 4px;
   padding-left: 34px;
   width: 100%;
   font-family: 'Open Sans', Arial, sans-serif;
-  color: var(--corTexto);
+  color: var(--textColor);
 }
-
-.conversorForm:focus {
+.converterForm:focus {
   outline-color: #a1a1a1;
 }
 
 #formCoin {
   position: absolute;
-  margin-top: 1px;
   left: 8px;
-  top: 4px;
-  font-weight: bold;
+  top: 5px;
 }
 #formWrapper {
   position: relative;
-
 }
 
-.subTitulo {
+.subTitle {
   display: block;
   margin-bottom: 8px;
 }
-
-.barTitulo {
+.barTitle {
   display: flex;
   justify-content: space-between;
   margin: 0 8px;
@@ -69,27 +63,26 @@
   display: flex;
   align-items: center;
   position: relative;
-  background-color: var(--corBarra);
+  background-color: var(--barColor);
   border-radius: 10px;
   color: white;
   padding-left: 8px;
   height: 15px;
 }
-
 .taxBar {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   position: absolute;
   right: 0;
-  background-color: var(--corOff);
+  background-color: var(--taxBarColor);
   height: 100%;
   border-radius: 10px;
   color: white;
-  font-weight: 600;
   padding-right: 8px;
 }
 
+/* generics */
 .size1 {
   font-size: 11px;
 }
@@ -102,8 +95,7 @@
 .size4 {
   font-size: 6px;
 }
-
-.topBorder {
-  border-top: 1px solid #F0EDED;
+.bold {
+  font-weight: bold;
 }
 

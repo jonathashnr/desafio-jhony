@@ -14,7 +14,8 @@ const INITIAL_RATES = {
   }
 }
 
-const Converter = ({ coinFrom = 'BRL', coinTo = 'USD'}) => {
+const Converter = ({ coinFrom = 'BRL', coinTo = 'USD' }) => {
+  
   const [formInput, setFormInput] = useState({ value:'', formatted:''});
   const [convertedRates, setConvertedRates] = useState(INITIAL_RATES);
   const caughtSomeError = useRef(false);
@@ -29,8 +30,9 @@ const Converter = ({ coinFrom = 'BRL', coinTo = 'USD'}) => {
     caughtSomeError.current = !isResolved;
     setConvertedRates(res)
   }
+
   return (
-    <div id='conversorContainer'>
+    <div id='conveterContainer'>
       <ConverterForm
         value={formInput}
         setValueFunction={setFormInput}
