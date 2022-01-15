@@ -1,10 +1,10 @@
-import React from 'react';
-import NumberFormat from 'react-number-format';
+import React from 'react'
+import NumberFormat from 'react-number-format'
 
-const ConverterForm = props => {
+const ConverterForm = ({ value, setValueFunction, coin, error}) => {
   const formHandler = (values) => {
-    const { formatted, value } = values;
-    props.setInput({ value , formatted });
+    const { value, formatted } = values;
+    setValueFunction({ value , formatted });
   }
   const createCoinColorStyle = (error) => {
     if (error) {
@@ -23,10 +23,10 @@ const ConverterForm = props => {
           decimalSeparator={','}
           decimalScale={2}
           allowNegative={false}
-          value={props.input.formatted}
+          value={value.formatted}
           onValueChange={formHandler}
         />
-        <span id='formCoin' style={createCoinColorStyle(props.error)} className='size1'>{props.coin}</span>
+        <span id='formCoin' style={createCoinColorStyle(error)} className='size1'>{coin}</span>
       </div>
     </div>
   )

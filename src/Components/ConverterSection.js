@@ -2,7 +2,7 @@ import React from 'react'
 import NumberFormat from 'react-number-format';
 
 
-const ConverterSection = function ({ title, value, tax, coin, showConversion }) {
+const ConverterSection = ({ title, value, tax, coin, showConversion }) => {
   let taxPercentage, taxWidthStyle, opacityStyle;
   if (showConversion) {
     taxPercentage = `${Math.round(tax*100)}%`;
